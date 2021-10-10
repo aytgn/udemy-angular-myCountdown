@@ -1,11 +1,2 @@
 <app-control-panel (numbers)="showNumbers($event)"> </app-control-panel>
-<div *ngFor="let number of numbers">
-  <div *ngIf="numbers[number] % 2 === 0">
-    <h4 class="blue">{{ numbers[number] }}</h4>
-  </div>
-  <div *ngIf="numbers[number] % 2 !== 0">
-    <h4 class="red">{{ numbers[number] }}</h4>
-  </div>
-</div>
-
-<app-game-counter></app-game-counter>
+<app-game-counter [numbers]="numbers"></app-game-counter>
